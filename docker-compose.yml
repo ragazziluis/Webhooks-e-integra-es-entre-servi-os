@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "5672:5672"  # Porta para conexões AMQP
+      - "15672:15672"  # Porta para o painel de controle web (opcional)
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"  # Usuário padrão
+      RABBITMQ_DEFAULT_PASS: "guest"  # Senha padrão
